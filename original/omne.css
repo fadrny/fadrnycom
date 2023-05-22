@@ -1,0 +1,53 @@
+.aboukont{
+    display: grid;
+    width: calc(100vw / 1.5);
+    grid-template-areas: 'kombicko text'
+    '. text'
+    ' . text'
+    ' . text';
+    grid-gap: 2em;
+    margin: auto;
+}
+.abo .kombicko{grid-area: kombicko;}
+.abo .textik{grid-area: text;}
+
+.abo{
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.abo .textik{
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.7em;
+    text-align: justify;
+}
+
+.abo .nadpisek{
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-size: 4em;
+}
+.abo .zpet{
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    margin: 0.2em;
+}
+@media only screen and (max-width: 60em){
+    .aboukont{
+        grid-template-areas:'kombicko' 'text';
+    }
+    .abo .kombicko{
+        margin-top: 2em ;
+    }
+    .abo .nadpisek{
+        font-size: 3.2em;
+    }
+}
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/qqt2pml.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="zaklad.css">
+    <link rel="stylesheet" href="omne.css">
+    <link rel="stylesheet" href="galerie.css">
+    <link rel="stylesheet" href="kontakt.css">
+    <link rel="shortcut icon" href="p/fav.png" />
+    <meta name="theme-color" content="#000000">
+    <script src="https://kit.fontawesome.com/baaad6a528.js" crossorigin="anonymous"></script>
+    <meta name="msapplication-navbutton-color" content="#000000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+    <title>Fadrny</title>
+    <script>
+        //alert("Stránka se v tuto chvíli funguje jako singlepage, neboť je momentálně kontrolována učitelem který tento projekt zadal. Stránka je funkční, avšak kvůli povaze zadání projektu je k navigaci nutné využít tlačítka na stránce - nelze použít šipky historie vpřed a vzad. Díky za pochopení");
+
+        let zobrazeno = false;
+
+        function prepni(cn) {
+            if (zobrazeno === false) {
+                document.getElementsByClassName(cn)[0].style.display = "flex";
+                document.getElementsByClassName('menu')[0].style.display = "none";
+                zobrazeno = true;
+            } else {
+                document.getElementsByClassName(cn)[0].style.display = "none";
+                document.getElementsByClassName('menu')[0].style.display = "flex";
+                zobrazeno = false;
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="menu">
+    <div class="nav">
+        <div class="about uns gihi" onclick="prepni('abo')">
+            <h3 class="menu-text blur1">kdo</h3>
+            <h3 class="menu-text">kdo</h3>
+        </div>
+        <div class="portfolio uns gihi" onclick="prepni('por')">
+            <h3 class="menu-text blur2"> co</h3>
+            <h3 class="menu-text"> co</h3>
+        </div>
+        <div class="kontakt uns gihi" onclick="prepni('kon')">
+            <h3 class="menu-text blur3">kde</h3>
+            <h3 class="menu-text">kde</h3>
+        </div>
+        <div class="logo uns">
+            <div id="logocontainer">
+                <p id="copyright">© 2020</p>
+                <a id="mname" class="menu-text gihi" href="mailto://marin.fadrny@gmail.com">fadrny</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="abo">
+    <div class="aboukont">
+        <div class="kombicko">
+            <h4 class="nadpisek uns">něco vo mně</h4>
+            <p class="zpet uns gihi" onclick="prepni('abo')">// zpátky</p>
+        </div>
+        <div class="textik">
+            <p class="sloh od1">Marek Fadrný, to jsem já, momentálně je mi osmnáct a jsem na střední ve třeťáku. Mimo školu se aktivně
+                angažuju v místním skautském oddíle, což je jedna z věcí, která mi tak nějak vydržela
+                z dětství až dodnes. Ve sportu se příliš nevyžívám, přesto se rád projedu na kole, nebo
+                si zajdu zaběhat.
+            </p>
+            <p>
+                Klasického desktopového programování jsem schopen v C# většinou na .NET frameworku, dříve jsem programoval i v Javě, avšak od toho jsem v posledních letech upustil. Za poslední dva roky jsem si oblíbil
+                programování mikrokontrolérů a celý koncept internetu věcí mě neskutečně baví.
+                Občas si napíšu nějaký web, zvládám HTML i CSS a oživuju je skrze JS nebo PHP, nyní se učím jak vdechnou život webu skrze NodeJS. 
+                Dlouhodobě mě baví design, který většinou dělám tak volnočasově a pro radost, miluju minimalismus a na spoustě věcí které jsem dělal je to vidět, ostatně to je možná taky hlavní důvod, proč tenhle web vypadá jak vypadá.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="por">
+    <div class="portkont">
+        <div class="kombicko">
+            <h4 class="nadpisek uns">něco co jsem splácal</h4>
+            <p class="zpet uns gihi" onclick="prepni('por')">// zpátky</p>
+        </div>
+        <div id="wrap">
+            <div class="fotky">
+                <div class="sloup">
+                    <img src="p/4.png" alt="dilo"/>
+                    <img src="p/2.png" alt="dilo"/>
+                    <img src="p/12.jpg" alt="dilo"/>
+                </div>
+                <div class="sloup">
+                    <img src="p/9.png" alt="dilo"/>
+                    <img src="p/5.png" alt="dilo"/>
+                    <img src="p/6.png" alt="dilo"/>
+                </div>
+                <div class="sloup">
+                    <img src="p/7.png" alt="dilo"/>
+                    <img src="p/8.png" alt="dilo"/>
+                    <img src="p/1.png" alt="dilo"/>
+                </div>
+                <div class="sloup">
+                    <img src="p/10.png" alt="dilo"/>
+                    <img src="p/11.jpg" alt="dilo"/>
+                    <img src="p/13.jpg" alt="dilo"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="kon">
+    <div class="konkont">
+        <div class="kombicko">
+            <h4 class="nadpisek uns">něco kde jsem</h4>
+            <p class="zpet uns gihi" onclick="prepni('kon')">// zpátky</p>
+        </div>
+        <div class="info">
+            <p class="jmeno">Marek Fadrný</p>
+            <a href="mailto://marin.fadrny@gmail.com">marin.fadrny@gmail.com</a>
+            <div class="ikonky uns">
+                <a href="https://facebook.com/fadrny" target="_blank"><i class="gihi fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/FadrnyMarek" target="_blank"><i class="gihi fab fa-twitter"></i></a>
+                <a href="https://instagram.com/_fadrny/" target="_blank"><i class="gihi fab fa-instagram"></i></a>
+                <a href="https://github.com/fadrma" target="_blank"><i class="gihi fab fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
